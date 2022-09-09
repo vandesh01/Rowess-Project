@@ -1,0 +1,54 @@
+// Primary Colors
+$themeColor: #00238C;
+$themeColorLight: #119489;
+$themeColorDark: #045955;
+$themeColorSecondary: #FDC735;
+$themeColorSecondaryDark: #E7AF1A;
+$green: #0D8877;
+
+// Secondary Colors
+$black: #000000;
+$white: #ffffff;
+$text: #000000;
+$grey: rgba($text, 0.5);
+$lightGrey: #8897A2;
+$disabled: #a2a2a2;
+$red: #ff0000;
+$cyan: #39C3BC;
+$orange: #ff9341;
+$lightBlue: #EDF2F9;
+$fontFamily1: "Open Sans";
+$fontFamily2: "Roboto";
+$fontFamily3: "Playfair Display";
+
+// Font weights
+$light: 300;
+$medium: 500;
+$normal: normal;
+$bold: bold;
+$extrabold: 900;
+
+// Mixins
+$baseSize: 16;
+@function size($target, $context: $baseSize) {
+    @return ($target / $context) * 1em;
+}
+
+$sitePadding: 16px;
+
+@mixin min($min) {
+    @media only screen and (min-width: #{$min}px) { @content };
+}
+
+@mixin max($max) {
+    @media only screen and (max-width: #{$max}px) { @content };
+}
+
+@mixin minMax($min, $max) {
+    @media only screen and (min-width: #{$min}px) and (max-width: #{$max}px) { @content };
+}
+
+.mozScrollbar {
+    scrollbar-color: $themeColor #f5f5f5;
+    scrollbar-width: thin;
+}
